@@ -1,5 +1,5 @@
 :root {
-    --primary: #ff691f;
+    --primario: #ff691f;
     --secundario:#ffb65c;
     --terciario:#ffe680;
     --negro: #262626;
@@ -20,4 +20,135 @@ body {
 }
 img {
     max-width: 100%;
+}
+[class$="__contenedor"]{
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+/*header*/
+
+.header{
+    background-image:linear-gradient(to right ,rgb(0 0 0 / .7),rgb(0 0 0 /  .7)),url(../img/header.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding:5rem 0;
+    position: relative;
+}
+.header__logo{
+    width: 30rem;
+}
+.header__barra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (min-width: 768px) {
+    .header__barra{
+        flex-direction: row;
+    }
+}
+/*solo aparecera cuando el viewport es min de 992px*/
+.header__guitarra{
+    display: none;
+}
+@media (min-width: 992px) {
+    .header__guitarra{
+        display: block;
+        /*el absolute es para que se posisicone en  funcion de su contenedor que no sea static(por defecto), en este caso header ; ese header por eso lo ponemos relative */
+        position: absolute;
+        /*posicionamos la imagen*/
+        right: 0;
+        bottom: 0;
+        /*animamos la imagen*/
+        animation-duration:1s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-name:animacionImagen;
+        /*tambien*/
+        /* animation: 1s ease-in-out 0s 1 animacionImagen; */
+    }
+}
+/*animacion para la guitarra*/
+@keyframes animacionImagen{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    50%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+
+}
+.navegacion{
+    display: flex;
+    gap: 2rem;
+    margin-top:4rem ;
+    /*para que la navegacion este encima de la imagen*/
+    position: relative;
+    z-index: 1;
+}
+@media (min-width: 768px) {
+    .navegacion{
+        margin-top: 0;
+    }
+}
+.navegacion__enlace{
+    color: var(--blanco);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    /*para que el hover sea un poco más lento al pasar a otro boton*/
+    transition-property:background-color ;
+    transition-duration: .5s;
+}
+.navegacion__enlace:hover{
+    background-color: var(--secundario);
+}
+.modelo{
+    color: var(--blanco);
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .modelo{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+}
+.modelo__nombre{
+    font-size: 7rem;
+}
+.modelo__costo{
+    color:var(--secundario);
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 3.5rem 0;
+}
+.modelo__enlace{
+    all: unset;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 5rem;
+    border: 2px solid var(--secundario);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.5rem;
+    width: 20%;
+    text-align: center;
+    transition-property:background-color ;
+    transition-duration: 0.4s;
+}
+.modelo__enlace:hover{
+    background-color: var(--secundario);
 }
