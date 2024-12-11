@@ -21,7 +21,9 @@ body {
 img {
     max-width: 100%;
 }
-[class$="__contenedor"]{
+/* el "*" permite que cualquier clase que uno de sus nombres termine en __contenedor se le aplique el estilo*/
+/*el "$" es cuando el nombre de la clase termine en __contenedor*/
+[class*="__contenedor"]{
     max-width: 120rem;
     width: 95%;
     margin: 0 auto;
@@ -211,4 +213,51 @@ img {
 .guitarra__enlace:hover{
     background-color: var(--secundario);
     color: var(--blanco);
+}
+/*curso*/
+.cursos{
+    margin:4rem auto ;
+    background-image: linear-gradient(to right ,rgb(0 0 0 / .65),rgb(0 0 0 /  .65)), url(../img/cursos_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    padding: 10rem 0 ; /*para estirar la imagen*/
+      
+}
+.cursos__contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .cursos__grid{
+        display: grid;
+        grid-template-columns: repeat(2 ,1fr);
+        column-gap: 2rem;
+    }
+    .cursos__contenido{
+        grid-column: 2 / 3;
+    }
+}
+.cursos__descripcion{
+    color: var(--blanco);
+    text-align: center;
+    font-size: 3rem;
+}
+.cursos__enlace{
+    all: unset;
+    /*para al poner margenes funcione pero que solo ocupe su lugar*/
+    display: inline-block;
+    border:2px solid var(--primario);
+    padding: 1rem 4rem;
+    margin: 2rem auto;
+    text-transform: uppercase;
+    color: var(--blanco);
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition-property:background-color ;
+    transition-duration: .3s;
+}
+.cursos__enlace:hover{
+    background-color: var(--secundario);
 }
