@@ -26,6 +26,13 @@ img {
     width: 95%;
     margin: 0 auto;
 }
+[class$="__heading"]{
+    text-align: center;
+    color: var(--primario);
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 5rem 0;
+}
 /*header*/
 
 .header{
@@ -151,4 +158,57 @@ img {
 }
 .modelo__enlace:hover{
     background-color: var(--secundario);
+}
+/*coleccion guitarras*/
+.guitarras__grid{
+    display: grid;
+    gap: 4rem;
+}
+@media (min-width: 768px) {
+    .guitarras__grid{
+        grid-template-columns:repeat(2 , 1fr);
+        gap:1.5rem;
+    }
+}
+@media (min-width: 1200px) {
+    .guitarras__grid{
+        grid-template-columns: repeat(3 ,1fr);
+    }
+}
+.guitarra{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+.guitarra__nombre{
+    text-transform:uppercase ;
+    font-size: 4rem;
+    font-weight: 800;
+}
+.guitarra__descripcion{
+    font-weight: 550;
+}
+.guitarra__costo{
+    color:var(--primario);
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 0.5rem;
+}
+.guitarra__enlace{
+    all: unset;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 1rem 5rem;
+    text-align: center;
+    border: 2px solid var(--primario);
+    transition-property:background-color ;
+    transition-duration: .5s;
+    cursor: pointer;
+}
+.guitarra__enlace:hover{
+    background-color: var(--secundario);
+    color: var(--blanco);
 }
