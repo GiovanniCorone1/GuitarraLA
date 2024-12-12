@@ -21,14 +21,14 @@ body {
 img {
     max-width: 100%;
 }
-/* el "*" permite que cualquier clase que uno de sus nombres termine en __contenedor se le aplique el estilo*/
-/*el "$" es cuando el nombre de la clase termine en __contenedor*/
-[class*="__contenedor"]{
+/* el "*" permite que cualquier clase que uno de sus nombres termine en contenedor se le aplique el estilo*/
+/*el "$" es cuando el nombre de la clase termine en contenedor*/
+[class*="contenedor"]{
     max-width: 120rem;
     width: 95%;
     margin: 0 auto;
 }
-[class$="__heading"]{
+[class$="heading"]{
     text-align: center;
     color: var(--primario);
     font-size: 4rem;
