@@ -367,3 +367,6 @@ img {
 .nosotros__grid{
     grid-template-columns: repeat(2 , 1fr);
 }
+.nosotros__imagen{
+    border-radius: 30px;
+}
