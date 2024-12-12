@@ -317,3 +317,44 @@ img {
     line-clamp: 4; /*lineas a mostrar*/
     overflow: hidden;/*para que ya no muestre las lineas de sobra*/
 }
+/*footer*/
+.footer{
+    background-color:var(--negro) ;
+    overflow: hidden;
+    margin-top:4rem ;
+}
+.footer__contenido{
+    display: flex;
+    flex-direction: column;
+    color: var(--blanco);
+    padding: 4rem 0;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .footer__contenido{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.footer__navegacion{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+@media (min-width: 768px){
+    .footer__navegacion{
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+.footer__enlace{
+    all: unset;
+    font-size: 3rem;
+    font-weight: 600;
+    transition-property:color ;
+    transition-duration: .3s;
+    cursor:pointer;
+}
+.footer__enlace:hover{
+    color: var(--primario);
+}
