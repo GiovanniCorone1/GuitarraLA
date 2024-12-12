@@ -358,3 +358,12 @@ img {
 .footer__enlace:hover{
     color: var(--primario);
 }
+/*Nosotros*/
+.nosotros__grid{
+    display: grid;
+    gap: 4rem;
+    align-items: center;
+}
+.nosotros__grid{
+    grid-template-columns: repeat(2 , 1fr);
+}
