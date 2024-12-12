@@ -257,7 +257,63 @@ img {
     font-weight: 700;
     transition-property:background-color ;
     transition-duration: .3s;
+    cursor: pointer;
 }
 .cursos__enlace:hover{
     background-color: var(--secundario);
+}
+/*blog*/
+.blog__grid{
+    display: grid;
+    gap: 4rem;
+}
+@media (min-width: 768px) {
+    .blog__grid{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+@media (min-width: 992px) {
+    .blog__grid{
+        grid-template-columns: repeat(4 , 1fr);
+    }
+}
+.entrada__contenido{
+    margin: 0 2rem;
+    font-weight: 500;
+}
+.entrada__titulo{
+    font-size: 400;
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+.entrada__fecha{
+    color: var(--secundario);
+    font-weight: 600;
+}
+.entrada__enlace{
+    all: unset;
+    color: var(--negro);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 900;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+    border: 2.5px solid var(--secundario);
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: .3s;
+} 
+.entrada__enlace:hover{
+    background-color: var(--primario);
+    color: var(--blanco);
+}
+/*para no mostrar toda la descripcion solo algunas lineas*/
+.entrada__descripcion{
+    display: -webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp: 4; /*lineas a mostrar*/
+    line-clamp: 4; /*lineas a mostrar*/
+    overflow: hidden;/*para que ya no muestre las lineas de sobra*/
 }
