@@ -214,6 +214,61 @@ img {
     background-color: var(--secundario);
     color: var(--blanco);
 }
+
+.guitarra__label{
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.guitarra__cantidad{
+    border: 2px solid var(--primario);
+    padding: 1rem;
+    text-align: center;
+}
+/*cuando se elige una cantidad se cambia el color de borde por uno de por defecto ,entonces utilizamos la pseudoclase focus-visible para cambiarlo*/
+.guitarra__cantidad:focus-visible{
+    /*quitamos el borde para q en este caso no se duplique*/
+    border: none;
+    /*damos color al nuevo borde(en el caso se le llama outline)*/
+    outline: 2px solid var(--primario);
+}
+.guitarra__agregar-carrito{
+    all: unset;
+    display: block;
+    background-color: var(--terciario);
+    color: var(--blanco);
+    margin-top: 4rem;
+    padding: 2rem 4rem;
+    border:2px solid var(--terciario);
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+.guitarra__agregar-carrito:hover{
+    background-color: var(--secundario);
+    cursor: pointer;
+}
+.guitarra__comprar-ahora{
+    all: unset;
+    display: block;
+    background-color: var(--secundario);
+    color: var(--blanco);
+    margin-top: 2rem;
+    padding: 2rem 6.2rem;
+    border:2px solid var(--terciario);
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+.guitarra__comprar-ahora:hover{
+    background-color: var(--primario);
+    cursor: pointer;
+}
 /*curso*/
 .cursos{
     margin:4rem auto ;
@@ -276,6 +331,14 @@ img {
     .blog__grid{
         grid-template-columns: repeat(4 , 1fr);
     }
+    .blog__grid--pagina{
+        grid-template-columns: repeat(3 , 1fr);
+    }
+}
+.entrada{
+    max-width: 80rem;
+    /*centramos el contenido del archivo entrada.html*/
+    margin: 0 auto;
 }
 .entrada__contenido{
     margin: 0 2rem;
