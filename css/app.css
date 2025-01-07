@@ -96,6 +96,44 @@ img {
     }
 
 }
+
+.carrito{
+    width: 5rem;
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    right: 7rem;
+}
+/* .header__carrito #carrito{
+    display: none;
+} */
+.carrito #carrito{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background-color: #FFF;
+    right: 6rem;
+}
+/* Tabla */
+table{
+    border-collapse: collapse;
+}
+th,
+td {
+  padding: 5px 9px;
+  border-bottom: 1px solid #E1E1E1; 
+}
+.carrito__vaciarCarrito{
+    all: unset;
+    width: 100%;
+    background-color: #ffb65c;
+    color: var(--blanco);
+    text-align: center;
+    border: 1px solid rgba(117, 116, 116, 0.516);
+    margin-top: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
 .navegacion{
     display: flex;
     gap: 2rem;
