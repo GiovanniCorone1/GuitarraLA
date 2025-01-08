@@ -107,7 +107,7 @@ img {
 /* .header__carrito #carrito{
     display: none;
 } */
-.carrito #carrito{
+.carrito__table{
     display: block;
     position: absolute;
     z-index: 1;
@@ -123,7 +123,7 @@ td {
   padding: 5px 9px;
   border-bottom: 1px solid #E1E1E1; 
 }
-.carrito__vaciarCarrito{
+.carrito__vaciar{
     all: unset;
     width: 100%;
     background-color: #ffb65c;
@@ -133,6 +133,14 @@ td {
     margin-top: 10px;
     text-transform: uppercase;
     cursor: pointer;
+}
+.delete-product{
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 .navegacion{
     display: flex;

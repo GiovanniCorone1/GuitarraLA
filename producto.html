@@ -27,8 +27,8 @@
             </div>
             <div class="carrito">
                 <img src="./img/cart.svg" alt="">
-                <div id="carrito">
-                    <table>
+                <div class="carrito__table">
+                    <table id="table-cart">
                         <thead>
                             <tr>
                                 <th>Imagen</th>
@@ -39,13 +39,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <td><img src="/img/guitarra_01.jpg" alt=""></td>
-                            <td>VAI</td>
-                            <td>$100</td>
-                            <td>1</td>
+                            
                         </tbody>
                     </table>
-                    <button class="carrito__vaciarCarrito">Vaciar Carrito</button>
+                    <button class="carrito__vaciar">Vaciar Carrito</button>
                 </div>
             </div>
         </div>
@@ -72,6 +69,7 @@
               type="submit"
               class="guitarra__agregar-carrito"    
               value="Agregar al carrito"
+              data-id="1"
               >
               <input 
               type="submit"
