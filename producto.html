@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GuitarLA:Producto</title>
+    <title>Music Club:Producto</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
                 </nav>
             </div>
             <div class="carrito">
-                <img src="./img/cart.svg" alt="">
+                <img class="cart__image" src="./img/cart.svg" alt="">
                 <div class="carrito__table">
                     <table id="table-cart">
                         <thead>
@@ -50,11 +50,10 @@
     <main class="contenedor">
       <div class="guitarra">
         <img class="guitarra__imagen" src="./img/guitarra_04.jpg" alt="modelo 4">
-        <!--no reutilizamos ya que posee algunas diferencias-->
         <div class="guitarra__contenido">
             <h3 class="guitarra__nombre">VAI</h3>
             <p class="guitarra__descripcion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde magni minus dicta, voluptate eum ullam numquam nesciunt iste incidunt corrupti expedita, assumenda quaerat dignissimos quos eius ex, doloribus obcaecati odit.</p>
-            <p class="guitarra__costo">$100</p>
+            <p class="guitarra__costo"><span>$</span>100</p>
             <form class="guitarra__formulario">
               <label class="guitarra__label">Cantidad :</label>
               <select class="guitarra__cantidad">
@@ -92,5 +91,6 @@
         </div>
     </footer>
     <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/activeCart.js"></script>
 </body>
 </html>

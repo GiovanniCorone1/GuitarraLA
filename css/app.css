@@ -104,16 +104,23 @@ img {
     bottom: 1rem;
     right: 7rem;
 }
-/* .header__carrito #carrito{
-    display: none;
-} */
+.cart__image{
+    cursor: pointer;
+}
 .carrito__table{
-    display: block;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     z-index: 1;
-    background-color: #FFF;
+    background-color: var(--blanco);
     right: 6rem;
-}
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+.carrito__table.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
 /* Tabla */
 table{
     border-collapse: collapse;

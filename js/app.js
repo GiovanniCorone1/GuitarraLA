@@ -1,3 +1,4 @@
+// import {index}
 const addCartBtn = document.querySelector(".guitarra")
 const tableCart = document.querySelector("#table-cart tbody")
 const deleteProductBtn = document.querySelector(".carrito__table")
@@ -25,11 +26,13 @@ function addCart(e){
   }
 }
 function postProduct(product){
+const costoElement = product.querySelector('.guitarra__costo');
+const price = parseFloat(costoElement.childNodes[1].textContent.trim());
   const infoProduct = {
     id:product.querySelector('input').getAttribute('data-id'),
     image:product.querySelector('img').src,
     name:product.querySelector('.guitarra__nombre').textContent,
-    price:product.querySelector('.guitarra__costo').textContent,
+    price:price,
     quantity:parseInt(product.querySelector('.guitarra__cantidad')?.value) || 0
   }
   if(infoProduct.quantity<=0){
@@ -64,7 +67,7 @@ function addCartHtml(){
     row.innerHTML=`
       <td><img src="${image}" width="100"></td>
       <td>${name}</td>
-      <td>${price}</td>
+      <td>$${price}</td>
       <td>${quantity}</td>
       <td>
         <a href="" class="delete-product" data-id="${id}" >x</a>
@@ -75,7 +78,7 @@ function addCartHtml(){
   const rowTotal = document.createElement('tr');
   rowTotal.innerHTML = `
     <td colspan="4" style="text-align: right;">Total:</td>
-    <td>${totalPrice.toFixed(2)}</td>  <!-- Mostrar el precio total con dos decimales -->
+    <td>$${totalPrice.toFixed(2)}</td>  
   `;
   tableCart.appendChild(rowTotal);
   saveSessionStorage()
