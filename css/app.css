@@ -214,7 +214,58 @@ td {
 .modelo__enlace:hover{
     background-color: var(--secundario);
 }
+/* coleccion baterias*/
+.baterias__title{
+    font-size: 3rem;
+}
+.baterias__grid{
+    display: grid;
+    gap: 1rem;
+}
+@media (min-width: 768px) {
+    .baterias__grid{
+        grid-template-columns:repeat(3 , 1fr) ;
+        gap: 2.5rem;
+    }
+}
+.bateria{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.2rem;
+    align-items: center;
+}
+.bateria__nombre{
+    text-transform:uppercase ;
+    font-size: 4rem;
+    font-weight: 800;
+}
+.bateria__costo{
+    color:var(--primario);
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 0.5rem;
+}
+.bateria__enlace{
+    all: unset;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 1rem 5rem;
+    text-align: center;
+    border: 2px solid var(--primario);
+    transition-property:background-color ;
+    transition-duration: .5s;
+    cursor: pointer;
+}
+.bateria__enlace:hover{
+    background-color: var(--secundario);
+    color: var(--blanco);
+}
 /*coleccion guitarras*/
+.guitarras__title{
+    font-size: 3rem;
+}
 .guitarras__grid{
     display: grid;
     gap: 4rem;
@@ -322,6 +373,133 @@ td {
     background-color: var(--primario);
     cursor: pointer;
 }
+/*otros*/
+.otros__title{
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+.otros__grid{
+    display: grid;
+    gap: 4rem;
+}
+@media (min-width: 768px) {
+    .otros__grid{
+        grid-template-columns:repeat(3, 1fr);
+        gap:1.5rem;
+    }
+}
+.bajo{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+.bajo__nombre{
+    text-transform:uppercase ;
+    font-size: 4rem;
+    font-weight: 800;
+}
+.bajo__costo{
+    color:var(--primario);
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 0.5rem;
+}
+.bajo__enlace{
+    all: unset;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 1rem 5rem;
+    text-align: center;
+    border: 2px solid var(--primario);
+    transition-property:background-color ;
+    transition-duration: .5s;
+    cursor: pointer;
+}
+.bajo__enlace:hover{
+    background-color: var(--secundario);
+    color: var(--blanco);
+}
+.saxofon{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+.saxofon__nombre{
+    text-transform:uppercase ;
+    font-size: 4rem;
+    font-weight: 800;
+}
+.saxofon__costo{
+    color:var(--primario);
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 0.5rem;
+}
+.saxofon__enlace{
+    all: unset;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 1rem 5rem;
+    text-align: center;
+    border: 2px solid var(--primario);
+    transition-property:background-color ;
+    transition-duration: .5s;
+    cursor: pointer;
+}
+.saxofon__enlace:hover{
+    background-color: var(--secundario);
+    color: var(--blanco);
+}
+.piano{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    place-items: center;
+}
+@media (min-width: 768px) {
+    .piano{
+        grid-template-columns: 1fr;
+        margin-left:4rem;
+    }
+}
+.piano__nombre{
+    text-transform:uppercase ;
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 1rem 0;
+}
+.piano__subtitulo{
+    margin: 0;
+}
+.piano__costo{
+    color:var(--primario);
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 0.5rem;
+}
+.piano__enlace{
+    all: unset;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 1rem 5rem;
+    text-align: center;
+    border: 2px solid var(--primario);
+    transition-property:background-color ;
+    transition-duration: .5s;
+    cursor: pointer;
+}
+.piano__enlace:hover{
+    background-color: var(--secundario);
+    color: var(--blanco);
+}
+
 /*curso*/
 .cursos{
     margin:4rem auto ;
