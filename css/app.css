@@ -654,12 +654,16 @@ td {
 }
 /*Nosotros*/
 .nosotros__grid{
-    display: grid;
-    gap: 4rem;
-    align-items: center;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
 }
-.nosotros__grid{
-    grid-template-columns: repeat(2 , 1fr);
+@media (min-width: 768px) {
+    .nosotros__grid{
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        align-items: center;
+    }
 }
 .nosotros__imagen{
     border-radius: 30px;
