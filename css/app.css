@@ -282,9 +282,8 @@ td {
 .guitarra{
     display: grid;
     grid-template-columns: 2fr 3fr;
-    gap: 1.5rem;
     align-items: center;
-}
+}   
 .guitarra__nombre{
     text-transform:uppercase ;
     font-size: 4rem;

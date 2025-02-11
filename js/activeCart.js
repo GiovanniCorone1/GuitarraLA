@@ -26,12 +26,12 @@ function renderProduct() {
 
   const guitarra = document.querySelector('.guitarra');
   const optionsHTML = Array.from({ length: 5 }, (_, i) => `<option value="${i + 1}">${i + 1}</option>`).join('');
-
+  const description = product.description ? product.description : '';
   guitarra.innerHTML = `
     <img class="guitarra__imagen" src="${product.imagen}" alt="modelo ${product.id}">
     <div class="guitarra__contenido">
         <h3 class="guitarra__nombre">${product.name}</h3>
-        <p class="guitarra__descripcion">${product.description}</p>
+        <p class="guitarra__descripcion">${description}</p>
         <p class="guitarra__costo"><span>$</span>${product.price}</p>
         <form class="guitarra__formulario">
           <label class="guitarra__label">Cantidad :</label>
