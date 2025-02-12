@@ -24,23 +24,23 @@ function renderProduct() {
     return;
   }
 
-  const guitarra = document.querySelector('.guitarra');
+  const guitarra = document.querySelector('.producto');
   const optionsHTML = Array.from({ length: 5 }, (_, i) => `<option value="${i + 1}">${i + 1}</option>`).join('');
   const description = product.description ? product.description : '';
   guitarra.innerHTML = `
-    <img class="guitarra__imagen" src="${product.imagen}" alt="modelo ${product.id}">
+    <img class="producto__imagen" src="${product.imagen}" alt="modelo ${product.id}">
     <div class="guitarra__contenido">
-        <h3 class="guitarra__nombre">${product.name}</h3>
-        <p class="guitarra__descripcion">${description}</p>
-        <p class="guitarra__costo"><span>$</span>${product.price}</p>
-        <form class="guitarra__formulario">
-          <label class="guitarra__label">Cantidad :</label>
-          <select class="guitarra__cantidad">
+        <h3 class="producto__nombre">${product.name}</h3>
+        <p class="producto__descripcion">${description}</p>
+        <p class="producto__costo"><span>$</span>${product.price}</p>
+        <form class="producto__formulario">
+          <label class="producto__label">Cantidad :</label>
+          <select class="producto__cantidad">
             <option value="">--Seleccione--</option>
             ${optionsHTML}
           </select>
-          <input type="submit" class="guitarra__agregar-carrito" value="Agregar al carrito" data-id="${product.id}">
-          <input type="submit" class="guitarra__comprar-ahora" value="Comprar ahora">
+          <input type="submit" class="producto__agregar-carrito" value="Agregar al carrito" data-id="${product.id}">
+          <input type="submit" class="producto__comprar-ahora" value="Comprar ahora">
         </form>
     </div>`;
 }

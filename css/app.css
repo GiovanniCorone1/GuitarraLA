@@ -279,19 +279,23 @@ td {
         grid-template-columns: repeat(3 ,1fr);
     }
 }
+.producto,
 .guitarra{
     display: grid;
     grid-template-columns: 2fr 3fr;
     align-items: center;
-}   
+}
+.producto__nombre,   
 .guitarra__nombre{
     text-transform:uppercase ;
     font-size: 4rem;
     font-weight: 800;
 }
+.producto__descripcion,
 .guitarra__descripcion{
     font-weight: 550;
 }
+.producto__costo,
 .guitarra__costo{
     color:var(--primario);
     font-size: 6rem;
@@ -315,24 +319,28 @@ td {
     background-color: var(--secundario);
     color: var(--blanco);
 }
-
-.guitarra__label{
+/* la de productos */
+.producto__imagen{
+    /* display: block; */
+    justify-self: end;
+}
+.producto__label{
     font-size: 2rem;
     margin-right: 1rem;
 }
-.guitarra__cantidad{
+.producto__cantidad{
     border: 2px solid var(--primario);
     padding: 1rem;
     text-align: center;
 }
 /*cuando se elige una cantidad se cambia el color de borde por uno de por defecto ,entonces utilizamos la pseudoclase focus-visible para cambiarlo*/
-.guitarra__cantidad:focus-visible{
+.producto__cantidad:focus-visible{
     /*quitamos el borde para q en este caso no se duplique*/
     border: none;
     /*damos color al nuevo borde(en el caso se le llama outline)*/
     outline: 2px solid var(--primario);
 }
-.guitarra__agregar-carrito{
+.producto__agregar-carrito{
     all: unset;
     display: block;
     background-color: var(--terciario);
@@ -347,11 +355,11 @@ td {
     transition-property: background-color;
     transition-duration: .3s;
 }
-.guitarra__agregar-carrito:hover{
+.producto__agregar-carrito:hover{
     background-color: var(--secundario);
     cursor: pointer;
 }
-.guitarra__comprar-ahora{
+.producto__comprar-ahora{
     all: unset;
     display: block;
     background-color: var(--secundario);
@@ -366,7 +374,7 @@ td {
     transition-property: background-color;
     transition-duration: .3s;
 }
-.guitarra__comprar-ahora:hover{
+.producto__comprar-ahora:hover{
     background-color: var(--primario);
     cursor: pointer;
 }

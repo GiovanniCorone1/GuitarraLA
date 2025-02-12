@@ -1,5 +1,5 @@
 // import {index}
-const addCartBtn = document.querySelector(".guitarra")
+const addCartBtn = document.querySelector(".producto")
 const tableCart = document.querySelector("#table-cart tbody")
 const deleteProductBtn = document.querySelector(".carrito__table")
 const emptyCartBtn = document.querySelector(".carrito__vaciar")
@@ -19,21 +19,21 @@ function registrarEventListener(){
 
 function addCart(e){
   e.preventDefault();
-  if(e.target.classList.contains('guitarra__agregar-carrito')){
+  if(e.target.classList.contains('producto__agregar-carrito')){
     console.log("agregando")
     const product = e.target.parentElement.parentElement.parentElement
     postProduct(product)
   }
 }
 function postProduct(product){
-const costoElement = product.querySelector('.guitarra__costo');
+const costoElement = product.querySelector('.producto__costo');
 const price = parseFloat(costoElement.childNodes[1].textContent.trim());
   const infoProduct = {
     id:product.querySelector('input').getAttribute('data-id'),
     image:product.querySelector('img').src,
-    name:product.querySelector('.guitarra__nombre').textContent,
+    name:product.querySelector('.producto__nombre').textContent,
     price:price,
-    quantity:parseInt(product.querySelector('.guitarra__cantidad')?.value) || 0
+    quantity:parseInt(product.querySelector('.producto__cantidad')?.value) || 0
   }
   if(infoProduct.quantity<=0){
     alert('Cantidad no vallida');
